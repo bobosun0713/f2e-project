@@ -33,7 +33,13 @@ module.exports = {
           20: '#cccccc',
           0: '#ffffff'
         }
-      }
+      },
+      backgroundColor: theme => ({
+        ...theme('colors')
+      }),
+      borderColor: theme => ({
+        ...theme('colors')
+      })
     }
   },
   plugins: []
