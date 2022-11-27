@@ -22,9 +22,12 @@
     font-size: 18px;
     font-weight: 500;
   }
-  main {
-    @apply h-screen;
+  body,
+  a,
+  button {
+    cursor: url('@/assets/images/common/cursor.svg'), default;
   }
+
   .font-normal {
     font-family: 'GenJyuuGothic', sans-serif;
   }
@@ -56,5 +59,13 @@
   .highlight-text {
     font-size: 24px;
     font-weight: 700;
+  }
+
+  #app {
+    height: 100%;
+  }
+
+  .home {
+    clip-path: circle(0%);
   }
 }
