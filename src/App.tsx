@@ -1,7 +1,7 @@
 import { defineComponent, ref } from 'vue';
 import { gsap } from 'gsap';
-import Loading from '@/components/Loading';
 import Home from '@/views/Index';
+import Loading from '@/components/Loading';
 
 export default defineComponent({
   name: 'App',

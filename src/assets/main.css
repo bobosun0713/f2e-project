@@ -25,7 +25,7 @@
   body,
   a,
   button {
-    cursor: url('@/assets/images/common/cursor.svg'), default;
+    cursor: url('@/assets/images/common/cursor.svg'), default !important;
   }
 
   .font-normal {
@@ -64,7 +64,6 @@
   #app {
     height: 100%;
   }
-
   .home {
     clip-path: circle(0%);
   }
