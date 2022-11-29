@@ -4,7 +4,7 @@ export default defineComponent({
   name: 'Sidebar',
   setup() {
     const sidebar = ref();
-    const isOpen = ref<boolean>(true);
+    const isOpen = ref<boolean>(false);
 
     const toggleHandler = (): void => {
       isOpen.value = !isOpen.value;
@@ -27,7 +27,7 @@ export default defineComponent({
   },
   render() {
     return (
-      <div ref="sidebar" class={`fixed top-0 h-screen flex transition-all ease-in-out ${this.isOpen ? 'left-0' : 'left-[-135px]'}`}>
+      <div ref="sidebar" class={`fixed z-[100] top-0 h-screen flex transition-all ease-in-out ${this.isOpen ? 'left-0' : 'left-[-135px]'}`}>
         <div class="w-[135px] bg-primary flex items-center flex-col">
           <a class="mt-[40px] group" href="https://2022.thef2e.com/news" target="_blank">
             <div class="w-full h-[60px] bg-[url('/src/assets/images/btn/btn_menu_info.svg')] bg-center bg-no-repeat group-hover:bg-[url('/src/assets/images/btn/btn_menu_info_h.svg')]"></div>
