@@ -1,4 +1,4 @@
-import { defineComponent, ref, onMounted, onUnmounted } from 'vue';
+import { defineComponent } from 'vue';
 import { getImage } from '@/utils/common';
 
 export default defineComponent({
@@ -15,21 +15,21 @@ export default defineComponent({
               <p class="text-[20px] text-primary font-bold">前端工程師</p>
               <img class="inline-block mt-[8px]" src={getImage('common/users.svg')} alt="" />
             </div>
-            <img class="h-[500px]" src={getImage('gif/character_f2e.gif')} />
+            <img class="h-[52vh]" src={getImage('gif/character_f2e.gif')} />
           </div>
           <div class="text-center">
             <div class="text-center">
               <p class="text-[20px] text-primary font-bold">UI設計師</p>
               <img class="inline-block mt-[8px]" src={getImage('common/users.svg')} alt="" />
             </div>
-            <img class="h-[500px]" src={getImage('gif/character_ui.gif')} />
+            <img class="h-[52vh]" src={getImage('gif/character_ui.gif')} />
           </div>
           <div class="text-center">
             <div class="text-center">
               <p class="text-[20px] text-primary font-bold">團體組</p>
               <img class="inline-block mt-[8px]" src={getImage('common/users.svg')} alt="" />
             </div>
-            <img class="h-[500px]" src={getImage('gif/character_team.gif')} />
+            <img class="h-[52vh]" src={getImage('gif/character_team.gif')} />
           </div>
         </div>
         <img class="m-[0_auto]" src={getImage('other/road.svg')} alt="" />
