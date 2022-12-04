@@ -38,7 +38,7 @@ export default defineComponent({
   },
   render() {
     return (
-      <div id="loading" class="h-screen w-full flex items-center justify-center flex-col">
+      <div id="loading" class="fixed z-[100] bg-secondary top-0 left-0  h-screen w-full flex items-center justify-center flex-col">
         <img class="w-[190px] h-[120px]" src={getImage('gif/loading.gif')} alt="loading" />
         <div class="w-[466px] h-[16px] border-2 rounded-[20px] border-primary">
           <div id="progress-bar" class="w-0 h-full  bg-primary"></div>
