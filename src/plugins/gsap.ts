@@ -11,30 +11,17 @@ export const gsapTimeline: Function = (el: any, opt: object) =>
   });
 
 export const firsScreenAnimation = () => {
-  const cloud = gsapTimeline('.first-screen', {
-    scrub: true
-    // markers: true
+  const cloud = gsapTimeline('.entry', {
+    start: 'top top',
+    // end: '+=10000px',
+    scrub: true,
+    markers: true
   });
   cloud
     .to('.bg-decoration', {
       scale: 1
     })
-    .to('.bg-decoration', {
-      scale: '.8'
-    })
-    .to('.bg-decoration', {
-      opacity: '0.6',
-      scale: '.4'
-    })
-    .to('.bg-decoration', {
-      opacity: '0',
-      scale: '.2'
-    });
-  const trafficLight = gsapTimeline('.first-screen', {
-    scrub: true
-    // markers: true
-  });
-  trafficLight //* 紅
+    //* 紅
     .to('.traffic-light-red', {
       display: 'block'
     })
@@ -59,7 +46,11 @@ export const firsScreenAnimation = () => {
       },
       '<'
     )
+
     //* 黃
+    .to('.bg-decoration', {
+      scale: '.8'
+    })
     .to('.traffic-light-red', {
       display: 'none'
     })
@@ -69,7 +60,12 @@ export const firsScreenAnimation = () => {
     .to('.traffic-light-green', {
       display: 'none'
     })
+
     //* 綠
+    .to('.bg-decoration', {
+      opacity: '0.6',
+      scale: '.4'
+    })
     .to('.traffic-light-red', {
       display: 'none'
     })
@@ -92,5 +88,108 @@ export const firsScreenAnimation = () => {
     .to('.running-title', { opacity: '0' }, '<')
     .to('.logo', {
       opacity: '0'
+    })
+    .to('.bg-decoration', {
+      opacity: '0',
+      scale: '0'
+    })
+    // SecondScreen
+    .to('.second-screen', {
+      display: 'flex'
+    })
+    .to(
+      '.second-screen-title',
+      {
+        opacity: '.6'
+      },
+      '<'
+    )
+    .to('.second-screen-title', {
+      opacity: '1'
+    })
+    .to('.second-screen-question_a', {
+      opacity: '.6',
+      scale: '.6'
+    })
+    .to('.second-screen-question_a', {
+      opacity: '1',
+      scale: '1'
+    })
+    .to('.second-screen-question_b', {
+      opacity: '.6',
+      scale: '.6'
+    })
+    .to('.second-screen-question_b', {
+      opacity: '1',
+      scale: '1'
+    })
+    .to('.second-screen-question_c', {
+      opacity: '.6',
+      scale: '.6'
+    })
+    .to('.second-screen-question_c', {
+      opacity: '1',
+      scale: '1'
+    })
+    // SecondScreen 收
+    .to('.second-screen-title', {
+      scale: '.6',
+      opacity: '.6'
+    })
+    .to(
+      '.second-screen-question_a',
+      {
+        opacity: '.6',
+        scale: '.6'
+      },
+      '<'
+    )
+    .to(
+      '.second-screen-question_b',
+      {
+        opacity: '.6',
+        scale: '.6'
+      },
+      '<'
+    )
+    .to(
+      '.second-screen-question_c',
+      {
+        opacity: '.6',
+        scale: '.6'
+      },
+      '<'
+    )
+    .to('.second-screen-title', {
+      scale: '0',
+      opacity: '0'
+    })
+    .to(
+      '.second-screen-question_a',
+      {
+        opacity: '0',
+        scale: '0'
+      },
+      '<'
+    )
+    .to(
+      '.second-screen-question_b',
+      {
+        opacity: '0',
+        scale: '0'
+      },
+      '<'
+    )
+    .to(
+      '.second-screen-question_c',
+      {
+        opacity: '0',
+        scale: '0'
+      },
+      '<'
+    )
+    // SecondScreen end
+    .to('.second-screen', {
+      display: 'none'
     });
 };
