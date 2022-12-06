@@ -16,6 +16,9 @@
 }
 
 @layer {
+  html {
+    @apply bg-secondary;
+  }
   body {
     @apply h-screen;
     font-family: 'GenJyuuGothic-Bold', sans-serif;
@@ -64,7 +67,7 @@
   #app {
     height: 100%;
   }
-  .home {
-    clip-path: circle(0%);
+  .init-screen {
+    clip-path: circle(100%);
   }
 }

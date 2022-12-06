@@ -14,8 +14,8 @@ export const firsScreenAnimation = () => {
   const cloud = gsapTimeline('.entry', {
     start: 'top top',
     // end: '+=10000px',
-    scrub: true,
-    markers: true
+    scrub: true
+    // markers: true
   });
   cloud
     .to('.bg-decoration', {
@@ -191,5 +191,23 @@ export const firsScreenAnimation = () => {
     // SecondScreen end
     .to('.second-screen', {
       display: 'none'
+    })
+    // ThirdScreen
+    .to('.third-screen', {
+      display: 'flex'
+    })
+    .to(
+      '.third-screen-title',
+      {
+        opacity: '.6'
+      },
+      '<'
+    )
+    .to('.third-screen-title', {
+      opacity: '1'
+    })
+    .to('.third-screen-join', {
+      opacity: '1',
+      y: '0px'
     });
 };

@@ -9,8 +9,8 @@ export default defineComponent({
     const homePageState = ref<boolean>(false);
     const onLoadingState = (state: boolean): void => {
       homePageState.value = state;
-      gsap.to('.home', {
-        clipPath: 'circle(100%)',
+      gsap.to('.init-screen', {
+        clipPath: 'circle(0%)',
         duration: 1
       });
     };
@@ -18,9 +18,11 @@ export default defineComponent({
   },
   render() {
     return (
-      <main class="h-full w-full bg-secondary flex items-center justify-center">
+      <main class="h-full w-ful flex items-center justify-center">
         <Loading onState={this.onLoadingState} />
-        <Home v-show={this.homePageState} class="home"></Home>
+        <div class="init-screen h-full w-full fixed top-0 left-0 z-[50] bg-secondary"></div>
+        <Home v-show={this.homePageState} isLoading={this.homePageState}></Home>
+        {/* <Home></Home> */}
       </main>
     );
   }

@@ -1,9 +1,10 @@
 import { defineComponent, watch } from 'vue';
+import { firsScreenAnimation } from '@/plugins/gsap';
 import Sidebar from '@/components/layout/Sidebar';
 import Running from '@/components/Running';
 import FirstScreen from '@/components/FirstScreen';
 import SecondScreen from '@/components/SecondScreen';
-import { firsScreenAnimation } from '@/plugins/gsap';
+import ThirdScreen from '@/components/ThirdScreen';
 
 export default defineComponent({
   name: 'Home',
@@ -11,7 +12,8 @@ export default defineComponent({
     Sidebar,
     Running,
     FirstScreen,
-    SecondScreen
+    SecondScreen,
+    ThirdScreen
   },
   props: {
     isLoading: {
@@ -34,9 +36,10 @@ export default defineComponent({
       <div class="h-full w-full">
         <Sidebar></Sidebar>
         <div class="entry h-[1000vh] w-full relative">
-          {/* <Running></Running> */}
+          <Running></Running>
           <FirstScreen></FirstScreen>
           <SecondScreen></SecondScreen>
+          <ThirdScreen></ThirdScreen>
         </div>
       </div>
     );
