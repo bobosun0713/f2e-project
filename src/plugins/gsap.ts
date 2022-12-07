@@ -13,7 +13,7 @@ export const gsapTimeline: Function = (el: any, opt: object) =>
 export const firsScreenAnimation = () => {
   const cloud = gsapTimeline('.entry', {
     start: 'top top',
-    // end: '+=10000px',
+    // end: '+=15000px',
     scrub: 2
     // markers: true
   });
@@ -233,8 +233,87 @@ export const firsScreenAnimation = () => {
       },
       '<'
     )
-    // ThirdScreen end
     .to('.third-screen', {
+      display: 'none'
+    })
+    // FourthScreen
+    .to('.fourth-screen', {
+      display: 'flex'
+    })
+    .to('.fourth-screen-title', {
+      opacity: '0.6'
+    })
+    .to('.fourth-screen-title', {
+      opacity: '1'
+    })
+    .to('.third-screen-item-a', {
+      opacity: '0.6',
+      y: 0
+    })
+    .to('.third-screen-item-a', {
+      opacity: '1'
+    })
+    .to('.third-screen-item-a', {
+      y: -300,
+      opacity: '.2'
+    })
+    .to(
+      '.third-screen-item-b',
+      {
+        opacity: '0.6',
+        y: -270
+      },
+      '<'
+    )
+    .to('.third-screen-item-b', {
+      opacity: '1'
+    })
+    .to('.third-screen-item-b', {
+      y: -580,
+      opacity: '.2'
+    })
+    .to(
+      '.third-screen-item-a',
+      {
+        y: -580,
+        opacity: 0
+      },
+      '<'
+    )
+    .to(
+      '.third-screen-item-c',
+      {
+        y: -550,
+        opacity: '.6'
+      },
+      '<'
+    )
+    .to('.third-screen-item-c', {
+      opacity: '1'
+    })
+    .to('.third-screen-item-c', {
+      opacity: '.2',
+      y: -850
+    })
+    .to(
+      '.third-screen-item-b',
+      {
+        opacity: '0',
+        y: -850
+      },
+      '<'
+    )
+    .to('.third-screen-item-c', {
+      opacity: '0',
+      y: -1150
+    })
+    .to('.fourth-screen-title', {
+      opacity: '.6'
+    })
+    .to('.fourth-screen-title', {
+      opacity: '0'
+    })
+    .to('.fourth-screen', {
       display: 'none'
     });
 };

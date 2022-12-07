@@ -5,6 +5,7 @@ import Running from '@/components/Running';
 import FirstScreen from '@/components/FirstScreen';
 import SecondScreen from '@/components/SecondScreen';
 import ThirdScreen from '@/components/ThirdScreen';
+import FourthScreen from '@/components/FourthScreen';
 
 export default defineComponent({
   name: 'Home',
@@ -13,7 +14,8 @@ export default defineComponent({
     Running,
     FirstScreen,
     SecondScreen,
-    ThirdScreen
+    ThirdScreen,
+    FourthScreen
   },
   props: {
     isLoading: {
@@ -40,6 +42,7 @@ export default defineComponent({
           <FirstScreen></FirstScreen>
           <SecondScreen></SecondScreen>
           <ThirdScreen></ThirdScreen>
+          <FourthScreen></FourthScreen>
         </div>
       </div>
     );
