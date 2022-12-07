@@ -14,7 +14,7 @@ export const firsScreenAnimation = () => {
   const cloud = gsapTimeline('.entry', {
     start: 'top top',
     // end: '+=10000px',
-    scrub: true
+    scrub: 2
     // markers: true
   });
   cloud
@@ -209,5 +209,32 @@ export const firsScreenAnimation = () => {
     .to('.third-screen-join', {
       opacity: '1',
       y: '0px'
+    })
+    // ThirdScreen 收
+    .to('.third-screen-title', {
+      opacity: '.6'
+    })
+    .to(
+      '.third-screen-join',
+      {
+        opacity: '.6',
+        y: '40px'
+      },
+      '<'
+    )
+    .to('.third-screen-title', {
+      opacity: '0'
+    })
+    .to(
+      '.third-screen-join',
+      {
+        opacity: '0',
+        y: '40px'
+      },
+      '<'
+    )
+    // ThirdScreen end
+    .to('.third-screen', {
+      display: 'none'
     });
 };
