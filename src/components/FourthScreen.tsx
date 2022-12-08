@@ -17,8 +17,8 @@ export default defineComponent({
           <p class="text-center text-[24px] text-secondary-dark font-bold">各路廠商強強聯手</p>
           <p class="text-center text-[24px] text-secondary-dark font-bold">共同設計出接地氣的網頁互動挑戰關卡</p>
         </div>
-        <div class="fourth-screen-list flex flex-col w-[65%] justify-between">
-          <div class="third-screen-item-a flex  items-start  translate-y-[240px] opacity-0">
+        <div class="fourth-screen-list flex flex-col w-[65%] justify-between relative">
+          <div class="third-screen-item-a flex  items-start  translate-y-[240px] absolute opacity-0">
             <img class="mr-[40px]" src={getImage('week/week_1.png')} alt="btn_join_h" />
             <div>
               <h3 class="text-[60px] text-highlight font-bold">WEEK 1</h3>
@@ -38,7 +38,7 @@ export default defineComponent({
             </div>
           </div>
 
-          <div class="third-screen-item-b flex items-start ml-auto translate-y-[240px] opacity-0">
+          <div class="third-screen-item-b flex items-start ml-auto translate-y-[240px] absolute right-0  opacity-0">
             <div class="text-right">
               <h3 class="text-[60px] text-highlight font-bold">WEEK 2</h3>
               <p class="text-[44px] text-primary mb-[20px]">今晚，我想來點點簽</p>
@@ -60,7 +60,7 @@ export default defineComponent({
             <img class="ml-[40px]" src={getImage('week/week_2.png')} alt="week_2" />
           </div>
 
-          <div class="third-screen-item-c flex items-start translate-y-[240px] opacity-0">
+          <div class="third-screen-item-c flex items-start translate-y-[240px] absolute opacity-0">
             <img class="mr-[40px]" src={getImage('week/week_3.png')} alt="week_3" />
             <div>
               <h3 class="text-[60px] text-highlight font-bold">WEEK 3</h3>

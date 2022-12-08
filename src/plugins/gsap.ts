@@ -261,7 +261,7 @@ export const firsScreenAnimation = () => {
       '.third-screen-item-b',
       {
         opacity: '0.6',
-        y: -270
+        y: 0
       },
       '<'
     )
@@ -269,13 +269,13 @@ export const firsScreenAnimation = () => {
       opacity: '1'
     })
     .to('.third-screen-item-b', {
-      y: -580,
+      y: -300,
       opacity: '.2'
     })
     .to(
       '.third-screen-item-a',
       {
-        y: -580,
+        y: -600,
         opacity: 0
       },
       '<'
@@ -283,8 +283,8 @@ export const firsScreenAnimation = () => {
     .to(
       '.third-screen-item-c',
       {
-        y: -550,
-        opacity: '.6'
+        opacity: '.6',
+        y: 0
       },
       '<'
     )
@@ -293,19 +293,19 @@ export const firsScreenAnimation = () => {
     })
     .to('.third-screen-item-c', {
       opacity: '.2',
-      y: -850
+      y: -300
     })
     .to(
       '.third-screen-item-b',
       {
         opacity: '0',
-        y: -850
+        y: -600
       },
       '<'
     )
     .to('.third-screen-item-c', {
       opacity: '0',
-      y: -1150
+      y: -600
     })
     .to('.fourth-screen-title', {
       opacity: '.6'
