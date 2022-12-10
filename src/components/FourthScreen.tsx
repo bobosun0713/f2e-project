@@ -8,7 +8,7 @@ export default defineComponent({
   },
   render() {
     return (
-      <section class="fourth-screen fixed top-0 left-0 w-full flex flex-col items-center hidden">
+      <section class="fourth-screen fixed top-0 left-0 w-full h-full flex flex-col items-center hidden">
         <div class="fourth-screen-title w-[875px] relative mt-[30px] mb-[100px] opacity-0">
           <img class="object-contain" src={getImage('other/bg_talking_long.png')} alt="week_1" />
           <h2 class="w-full absolute top-[8%] left-1/2 translate-x-[-50%]  text-[60px] fw-700  text-center  text-primary">

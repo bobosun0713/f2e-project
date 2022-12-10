@@ -315,5 +315,73 @@ export const firsScreenAnimation = () => {
     })
     .to('.fourth-screen', {
       display: 'none'
+    })
+    // FifthScreen
+    .to('.fifth-screen', {
+      display: 'flex'
+    })
+    .to('.fifth-screen-line', {
+      left: '100%'
+    })
+    .to('.fifth-screen-item-a', {
+      opacity: 1,
+      y: 0
+    })
+    .to(
+      '.fifth-screen-circle-a',
+      {
+        display: 'block'
+      },
+      '<'
+    )
+    .to(
+      '.fifth-screen-bar-a',
+      {
+        opacity: 1,
+        height: 140
+      },
+      '<'
+    )
+    .to('.fifth-screen-item-b', {
+      opacity: 1,
+      y: 0
+    })
+    .to(
+      '.fifth-screen-bar-b',
+      {
+        opacity: 1,
+        height: 60
+      },
+      '<'
+    )
+    .to(
+      '.fifth-screen-circle-b',
+      {
+        display: 'block'
+      },
+      '<'
+    )
+    .to('.fifth-screen-item-c', {
+      opacity: 1,
+      y: 0
+    })
+    .to(
+      '.fifth-screen-bar-c',
+      {
+        opacity: 1,
+        height: 100
+      },
+      '<'
+    )
+    .to(
+      '.fifth-screen-circle-c',
+      {
+        display: 'block'
+      },
+      '<'
+    )
+    .to('.fifth-screen', {
+      display: 'none',
+      opacity: 0
     });
 };
