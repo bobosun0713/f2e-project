@@ -33,7 +33,7 @@ export default defineComponent({
         </div>
         <div class="absolute top-[60%]  w-full">
           <div class="w-[60%] absolute left-0 right-0 top-[18px] mx-auto flex justify-between">
-            <div class="relative w-[32px] mb-[-41px]">
+            <div class="relative w-[32px] mb-[-55px]">
               <div class="fifth-screen-bar-a w-[8px] h-[140px] h-[0] opacity-0 absolute bottom-0 left-0 right-0 mx-auto  bg-primary"></div>
               <div class="fifth-screen-circle-a hidden absolute bottom-0 w-full h-[32px]  bg-primary rounded-[50%]"></div>
             </div>
@@ -41,7 +41,7 @@ export default defineComponent({
               <div class="fifth-screen-bar-b w-[8px] h-[60px] h-[0] opacity-0 absolute bottom-0 left-0 right-0 mx-auto  bg-primary"></div>
               <div class="fifth-screen-circle-b hidden absolute bottom-0 w-full h-[32px]  bg-primary rounded-[50%]"></div>
             </div>
-            <div class="relative w-[32px] mb-[-41px]">
+            <div class="relative w-[32px] mb-[-55px]">
               <div class="fifth-screen-bar-c w-[8px] h-[100px] h-[0] opacity-0 absolute bottom-0 left-0 right-0 mx-auto  bg-primary"></div>
               <div class="fifth-screen-circle-c hidden absolute bottom-0 w-full h-[32px]  bg-primary rounded-[50%]"></div>
             </div>
