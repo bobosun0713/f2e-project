@@ -383,5 +383,107 @@ export const firsScreenAnimation = () => {
     .to('.fifth-screen', {
       display: 'none',
       opacity: 0
-    });
+    })
+    // SixthScreen
+    .to('.sixth-screen', {
+      display: 'block'
+    })
+    .to(
+      '.sixth-screen-decorate-one',
+      {
+        left: '-5%'
+      },
+      '<'
+    )
+    .to(
+      '.sixth-screen-decorate-two',
+      {
+        right: '-5%'
+      },
+      '<'
+    )
+    .to('.sixth-screen-title-one', {
+      opacity: 1,
+      scale: '1'
+    })
+    .to(
+      '.sixth-screen-decorate-one',
+      {
+        left: '10%'
+      },
+      '<'
+    )
+    .to(
+      '.sixth-screen-decorate-two',
+      {
+        right: '10%'
+      },
+      '<'
+    )
+    .to('.sixth-screen-title-one', {
+      opacity: 0
+    })
+    .to(
+      '.sixth-screen-decorate-one',
+      {
+        opacity: 0
+      },
+      '<'
+    )
+    .to(
+      '.sixth-screen-decorate-two',
+      {
+        opacity: 0
+      },
+      '<'
+    )
+    .to(
+      '.sixth-screen-content-one',
+      {
+        display: 'none'
+      },
+      '<'
+    )
+    .to('.sixth-screen-content-two', {
+      display: 'block',
+      opacity: '1'
+    })
+    .to(
+      '.sixth-screen-trophy',
+      {
+        x: '0'
+      },
+      '<'
+    )
+    .to(
+      '.sixth-screen-light',
+      {
+        rotate: '180deg'
+      },
+      '<'
+    )
+    .to('.sixth-screen-light', {
+      rotate: '360deg'
+    })
+    .to(
+      '.sixth-screen-trophy',
+      {
+        x: '30px'
+      },
+      '<'
+    )
+    .to(
+      '.sixth-screen-content-two',
+      {
+        opacity: 0
+      },
+      '<'
+    )
+    .to(
+      '.sixth-screen',
+      {
+        display: 'none'
+      },
+      '<'
+    );
 };
