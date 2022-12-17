@@ -14,7 +14,7 @@ export const firsScreenAnimation = () => {
   const cloud = gsapTimeline('.entry', {
     start: 'top top',
     // end: '+=15000px',
-    scrub: 2
+    scrub: 3
     // markers: true
   });
   cloud
@@ -481,6 +481,100 @@ export const firsScreenAnimation = () => {
     )
     .to(
       '.sixth-screen',
+      {
+        display: 'none'
+      },
+      '<'
+    )
+    // SeventhScreen
+    .to('.seventh-screen', {
+      display: 'block'
+    })
+    .to(
+      '.seventh-screen-title',
+      {
+        opacity: 1
+      },
+      '<'
+    )
+    .to(
+      '.seventh-screen-bg:nth-of-type(1)',
+      {
+        left: '0%'
+      },
+      '<'
+    )
+    .to(
+      '.seventh-screen-bg:nth-of-type(2)',
+      {
+        right: '0%'
+      },
+      '<'
+    )
+    .to('.seventh-screen-content', {
+      opacity: 1
+    })
+    .to(
+      '.seventh-screen-item:nth-child(2)',
+      {
+        y: '0px'
+      },
+      '<'
+    )
+    .to(
+      '.seventh-screen-item:nth-child(3)',
+      {
+        y: '0px'
+      },
+      '<'
+    )
+    .to(
+      '.seventh-screen-bg:nth-of-type(1)',
+      {
+        left: '10%',
+        scale: 0.7
+      },
+      '<'
+    )
+    .to(
+      '.seventh-screen-bg:nth-of-type(2)',
+      {
+        right: '10%',
+        scale: 0.7
+      },
+      '<'
+    )
+    .to('.seventh-screen-content', {
+      opacity: 0,
+      y: '10px'
+    })
+    .to(
+      '.seventh-screen-title',
+      {
+        opacity: 0
+      },
+      '<'
+    )
+    .to(
+      '.seventh-screen-bg:nth-of-type(1)',
+      {
+        left: '20%',
+        scale: 0.4,
+        opacity: 0
+      },
+      '<'
+    )
+    .to(
+      '.seventh-screen-bg:nth-of-type(2)',
+      {
+        right: '20%',
+        scale: 0.4,
+        opacity: 0
+      },
+      '<'
+    )
+    .to(
+      '.seventh-screen',
       {
         display: 'none'
       },

@@ -6,6 +6,9 @@ import FirstScreen from '@/components/FirstScreen';
 import SecondScreen from '@/components/SecondScreen';
 import ThirdScreen from '@/components/ThirdScreen';
 import FourthScreen from '@/components/FourthScreen';
+import FifthScreen from '@/components/FifthScreen';
+import SixthScreen from '@/components/SixthScreen';
+import SeventhScreen from '@/components/SeventhScreen';
 
 export default defineComponent({
   name: 'Home',
@@ -15,7 +18,10 @@ export default defineComponent({
     FirstScreen,
     SecondScreen,
     ThirdScreen,
-    FourthScreen
+    FourthScreen,
+    FifthScreen,
+    SixthScreen,
+    SeventhScreen
   },
   props: {
     isLoading: {
@@ -43,6 +49,9 @@ export default defineComponent({
           <SecondScreen></SecondScreen>
           <ThirdScreen></ThirdScreen>
           <FourthScreen></FourthScreen>
+          <FifthScreen></FifthScreen>
+          <SixthScreen></SixthScreen>
+          <SeventhScreen></SeventhScreen>
         </div>
       </div>
     );
