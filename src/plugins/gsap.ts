@@ -579,5 +579,111 @@ export const firsScreenAnimation = () => {
         display: 'none'
       },
       '<'
-    );
+    )
+    // EighthScreen
+    .to('.eighth-screen', {
+      display: 'block',
+      opacity: 1
+    })
+    .to(
+      '.eighth-screen-bg:nth-of-type(1)',
+      {
+        left: '0%'
+      },
+      '<'
+    )
+    .to(
+      '.eighth-screen-bg:nth-of-type(2)',
+      {
+        right: '0%'
+      },
+      '<'
+    )
+    .to('.eighth-screen-bg:nth-of-type(3)', {
+      display: 'block',
+      opacity: 1
+    })
+    .to(
+      '.eighth-screen-finish',
+      {
+        display: 'flex',
+        opacity: 1
+      },
+      '<'
+    )
+    .to('.eighth-screen-bg:nth-of-type(3)', {
+      scale: 1
+    })
+    .to(
+      '.eighth-screen-finish',
+      {
+        bottom: '20%'
+      },
+      '<'
+    )
+    .to('.eighth-screen-bg:nth-of-type(1)', {
+      left: '10%',
+      scale: 0.7
+    })
+    .to(
+      '.eighth-screen-bg:nth-of-type(2)',
+      {
+        right: '10%',
+        scale: 0.7
+      },
+      '<'
+    )
+    .to(
+      '.eighth-screen-finish__line:nth-of-type(1)',
+      {
+        rotate: '-5deg',
+        x: '-15'
+      },
+      '<'
+    )
+    .to(
+      '.eighth-screen-finish__line:nth-of-type(2)',
+      {
+        rotate: '5deg',
+        x: '15'
+      },
+      '<'
+    )
+    .to('.eighth-screen-finish__line:nth-of-type(1)', {
+      x: '-1000px',
+      opacity: 0
+    })
+    .to(
+      '.eighth-screen-finish__line:nth-of-type(2)',
+      {
+        x: '1000px',
+        opacity: 0
+      },
+      '<'
+    )
+    .to(
+      '.eighth-screen-bg:nth-of-type(1)',
+      {
+        left: '20%',
+        opacity: 0,
+        scale: 0
+      },
+      '<'
+    )
+    .to(
+      '.eighth-screen-bg:nth-of-type(2)',
+      {
+        right: '20%',
+        opacity: 0,
+        scale: 0
+      },
+      '<'
+    )
+    .to('.eighth-screen-bg:nth-of-type(3)', {
+      opacity: 0
+    })
+    .to('.eighth-screen-join', {
+      display: 'block',
+      opacity: 1
+    });
 };

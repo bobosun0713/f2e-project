@@ -9,6 +9,7 @@ import FourthScreen from '@/components/FourthScreen';
 import FifthScreen from '@/components/FifthScreen';
 import SixthScreen from '@/components/SixthScreen';
 import SeventhScreen from '@/components/SeventhScreen';
+import EighthScreen from '@/components/EighthScreen';
 
 export default defineComponent({
   name: 'Home',
@@ -21,7 +22,8 @@ export default defineComponent({
     FourthScreen,
     FifthScreen,
     SixthScreen,
-    SeventhScreen
+    SeventhScreen,
+    EighthScreen
   },
   props: {
     isLoading: {
@@ -44,7 +46,7 @@ export default defineComponent({
       <div class="h-full w-full">
         <Sidebar></Sidebar>
         <div class="entry h-[1000vh] w-full relative">
-          <Running></Running>
+          {/* <Running></Running> */}
           <FirstScreen></FirstScreen>
           <SecondScreen></SecondScreen>
           <ThirdScreen></ThirdScreen>
@@ -52,6 +54,7 @@ export default defineComponent({
           <FifthScreen></FifthScreen>
           <SixthScreen></SixthScreen>
           <SeventhScreen></SeventhScreen>
+          <EighthScreen></EighthScreen>
         </div>
       </div>
     );
