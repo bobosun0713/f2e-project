@@ -1,11 +1,12 @@
-import { ScrollTrigger, ScrollToPlugin } from 'gsap/all';
+import { ScrollTrigger } from 'gsap/all';
 import gsap from 'gsap';
 gsap.registerPlugin(ScrollTrigger);
 
-export const gsapTimeline: Function = (el: any, opt: object) =>
+export const gsapTimeline: Function = (ele: string, opt: object) =>
   gsap.timeline({
     scrollTrigger: {
-      target: el,
+      // @ts-ignore
+      target: ele,
       ...opt
     }
   });
@@ -14,7 +15,7 @@ export const firsScreenAnimation = () => {
   const cloud = gsapTimeline('.entry', {
     start: 'top top',
     // end: '+=15000px',
-    scrub: 3
+    scrub: 1
     // markers: true
   });
   cloud
@@ -97,13 +98,32 @@ export const firsScreenAnimation = () => {
     .to('.second-screen', {
       display: 'flex'
     })
+    //* Running
+    .to('.running-content', {
+      scale: 0.6,
+      bottom: '-110px'
+    })
     .to(
-      '.second-screen-title',
+      '.running-logo',
       {
-        opacity: '.6'
+        opacity: 1
       },
       '<'
     )
+    //* Running Map
+    .to(
+      '.running-map__current:nth-of-type(1)',
+      {
+        display: 'none'
+      },
+      '<'
+    )
+    .to('.running-map__current:nth-of-type(2)', {
+      display: 'block'
+    })
+    .to('.second-screen-title', {
+      display: 'block'
+    })
     .to('.second-screen-title', {
       opacity: '1'
     })
@@ -188,9 +208,24 @@ export const firsScreenAnimation = () => {
       },
       '<'
     )
-    // SecondScreen end
     .to('.second-screen', {
       display: 'none'
+    })
+    //* Running
+    .to('.running-content', {
+      scale: 1,
+      bottom: '0px'
+    })
+    //* Running Map
+    .to(
+      '.running-map__current:nth-of-type(2)',
+      {
+        display: 'none'
+      },
+      '<'
+    )
+    .to('.running-map__current:nth-of-type(3)', {
+      display: 'block'
     })
     // ThirdScreen
     .to('.third-screen', {
@@ -210,7 +245,6 @@ export const firsScreenAnimation = () => {
       opacity: '1',
       y: '0px'
     })
-    // ThirdScreen 收
     .to('.third-screen-title', {
       opacity: '.6'
     })
@@ -237,15 +271,32 @@ export const firsScreenAnimation = () => {
       display: 'none'
     })
     // FourthScreen
+    //* Running Map
+    .to(
+      '.running-map__current:nth-of-type(3)',
+      {
+        display: 'none'
+      },
+      '<'
+    )
+    .to('.running-map__current:nth-of-type(4)', {
+      display: 'block'
+    })
     .to('.fourth-screen', {
       display: 'flex'
     })
     .to('.fourth-screen-title', {
-      opacity: '0.6'
-    })
-    .to('.fourth-screen-title', {
       opacity: '1'
     })
+    //* Running
+    .to(
+      '.running-content',
+      {
+        scale: 0.6,
+        bottom: '-110px'
+      },
+      '<'
+    )
     .to('.third-screen-item-a', {
       opacity: '0.6',
       y: 0
@@ -317,6 +368,17 @@ export const firsScreenAnimation = () => {
       display: 'none'
     })
     // FifthScreen
+    //* Running Map
+    .to(
+      '.running-map__current:nth-of-type(4)',
+      {
+        display: 'none'
+      },
+      '<'
+    )
+    .to('.running-map__current:nth-of-type(5)', {
+      display: 'block'
+    })
     .to('.fifth-screen', {
       display: 'flex'
     })
@@ -385,6 +447,17 @@ export const firsScreenAnimation = () => {
       opacity: 0
     })
     // SixthScreen
+    //* Running Map
+    .to(
+      '.running-map__current:nth-of-type(5)',
+      {
+        display: 'none'
+      },
+      '<'
+    )
+    .to('.running-map__current:nth-of-type(6)', {
+      display: 'block'
+    })
     .to('.sixth-screen', {
       display: 'block'
     })
@@ -487,6 +560,17 @@ export const firsScreenAnimation = () => {
       '<'
     )
     // SeventhScreen
+    //* Running Map
+    .to(
+      '.running-map__current:nth-of-type(6)',
+      {
+        display: 'none'
+      },
+      '<'
+    )
+    .to('.running-map__current:nth-of-type(7)', {
+      display: 'block'
+    })
     .to('.seventh-screen', {
       display: 'block'
     })
@@ -581,9 +665,21 @@ export const firsScreenAnimation = () => {
       '<'
     )
     // EighthScreen
+    //* Running Map
+    .to(
+      '.running-map__current:nth-of-type(7)',
+      {
+        display: 'none'
+      },
+      '<'
+    )
     .to('.eighth-screen', {
       display: 'block',
       opacity: 1
+    })
+
+    .to('.running-map__current:nth-of-type(8)', {
+      display: 'block'
     })
     .to(
       '.eighth-screen-bg:nth-of-type(1)',
@@ -611,6 +707,15 @@ export const firsScreenAnimation = () => {
       },
       '<'
     )
+    //* Running
+    .to(
+      '.running-content',
+      {
+        scale: 0.9,
+        bottom: '-25px'
+      },
+      '<'
+    )
     .to('.eighth-screen-bg:nth-of-type(3)', {
       scale: 1
     })
@@ -623,13 +728,15 @@ export const firsScreenAnimation = () => {
     )
     .to('.eighth-screen-bg:nth-of-type(1)', {
       left: '10%',
-      scale: 0.7
+      scale: 0.7,
+      opacity: 0
     })
     .to(
       '.eighth-screen-bg:nth-of-type(2)',
       {
         right: '10%',
-        scale: 0.7
+        scale: 0.7,
+        opacity: 0
       },
       '<'
     )
@@ -649,6 +756,15 @@ export const firsScreenAnimation = () => {
       },
       '<'
     )
+    //* Running
+    .to(
+      '.running-content',
+      {
+        scale: 1,
+        bottom: '0px'
+      },
+      '<'
+    )
     .to('.eighth-screen-finish__line:nth-of-type(1)', {
       x: '-1000px',
       opacity: 0
@@ -661,6 +777,18 @@ export const firsScreenAnimation = () => {
       },
       '<'
     )
+    //* Running
+    .to(
+      '.running-people',
+      {
+        scale: 1.4
+      },
+      '<'
+    )
+    .to('.running-people', {
+      scale: 2,
+      opacity: 0
+    })
     .to(
       '.eighth-screen-bg:nth-of-type(1)',
       {
@@ -685,5 +813,13 @@ export const firsScreenAnimation = () => {
     .to('.eighth-screen-join', {
       display: 'block',
       opacity: 1
-    });
+    })
+    //* Running
+    .to(
+      '.running-logo',
+      {
+        opacity: 0
+      },
+      '<'
+    );
 };

@@ -46,7 +46,7 @@ export default defineComponent({
       <div class="h-full w-full">
         <Sidebar></Sidebar>
         <div class="entry h-[1000vh] w-full relative">
-          {/* <Running></Running> */}
+          <Running></Running>
           <FirstScreen></FirstScreen>
           <SecondScreen></SecondScreen>
           <ThirdScreen></ThirdScreen>
