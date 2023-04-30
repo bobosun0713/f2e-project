@@ -22,7 +22,6 @@ export default defineComponent({
         <Loading onState={this.onLoadingState} />
         <div class="init-screen h-full w-full fixed top-0 left-0 z-[50] bg-secondary"></div>
         <Home v-show={this.homePageState} isLoading={this.homePageState}></Home>
-        {/* <Home></Home> */}
       </main>
     );
   }
